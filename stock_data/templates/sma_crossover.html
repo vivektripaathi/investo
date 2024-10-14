@@ -1,0 +1,25 @@
+<!-- templates/stock_data/sma_crossover.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMA Crossover Strategy Results</title>
+</head>
+<body>
+    <h1>SMA Crossover Strategy Results</h1>
+
+    <h2>Buy Signals</h2>
+    <ul>
+        {% for signal in buy_signals %}
+            <li>{{ signal.datetime }} - Buy at {{ signal.close }} (SMA Short: {{ signal.SMA_Short }}, SMA Long: {{ signal.SMA_Long }})</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Sell Signals</h2>
+    <ul>
+        {% for signal in sell_signals %}
+            <li>{{ signal.datetime }} - Sell at {{ signal.close }} (SMA Short: {{ signal.SMA_Short }}, SMA Long: {{ signal.SMA_Long }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
