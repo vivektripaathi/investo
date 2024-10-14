@@ -24,7 +24,8 @@ env = environ.Env(
 )
 env.read_env(os.path.join(BASE_DIR, ".env"))
 # Get the SECRETS from environment variables
-~
+GOOGLE_SHEET_URL = env("GOOGLE_SHEET_URL")
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
